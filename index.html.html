@@ -1,0 +1,279 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --red:#D32F2F;--red-dark:#B71C1C;--red-light:#FFEBEE;
+    --orange:#F57C00;--yellow:#FFF8E1;
+    --text:#1A1A1A;--text2:#555;--border:#E0E0E0;
+    --bg:#FAFAFA;--white:#fff;
+  }
+  body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6}
+  
+  /* STICKY CALL BAR */
+  .sticky-call{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--red);padding:10px 16px;display:flex;gap:8px;align-items:center;justify-content:center;box-shadow:0 -4px 20px rgba(0,0,0,0.2)}
+  .sticky-call a{display:flex;align-items:center;gap:8px;background:#fff;color:var(--red);text-decoration:none;border-radius:50px;padding:10px 20px;font-weight:800;font-size:15px;flex:1;max-width:200px;justify-content:center}
+  .sticky-call a.zalo{background:#0068FF;color:#fff}
+  .sticky-call-label{color:#fff;font-size:13px;font-weight:600;text-align:center}
+  
+  /* HEADER */
+  .header{background:linear-gradient(135deg,#B71C1C 0%,#D32F2F 50%,#E53935 100%);color:#fff;padding:0}
+  .topbar{background:rgba(0,0,0,0.25);padding:8px 16px;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+  .topbar span{opacity:0.9}
+  .topbar a{color:#FFD54F;text-decoration:none;font-weight:700;font-size:13px}
+  .hero{padding:28px 16px 24px;text-align:center}
+  .hero-badge{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#FFD54F;font-size:11px;font-weight:700;padding:4px 12px;border-radius:50px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+  .hero h1{font-size:26px;font-weight:900;line-height:1.2;margin-bottom:8px;color:#fff}
+  .hero h1 span{color:#FFD54F}
+  .hero-sub{font-size:14px;opacity:0.9;margin-bottom:20px}
+  .hero-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .btn-call{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--red);text-decoration:none;border-radius:50px;padding:13px 24px;font-weight:800;font-size:16px;box-shadow:0 4px 16px rgba(0,0,0,0.3);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 4px 16px rgba(0,0,0,0.3),0 0 0 0 rgba(255,255,255,0.5)}50%{box-shadow:0 4px 16px rgba(0,0,0,0.3),0 0 0 8px rgba(255,255,255,0)}}
+  .btn-zalo{display:inline-flex;align-items:center;gap:8px;background:#0068FF;color:#fff;text-decoration:none;border-radius:50px;padding:13px 24px;font-weight:700;font-size:15px}
+  .hero-trust{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .trust-item{display:flex;align-items:center;gap:5px;font-size:12px;color:rgba(255,255,255,0.85)}
+  .trust-dot{width:6px;height:6px;border-radius:50%;background:#4CAF50}
+  
+  /* USP BAR */
+  .usp-bar{background:#fff;border-bottom:1px solid var(--border);padding:14px 16px;display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:480px;margin:0 auto}
+  .usp-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--text)}
+  .usp-icon{width:32px;height:32px;border-radius:8px;background:var(--red-light);color:var(--red);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+  
+  /* SECTION */
+  .section{padding:24px 16px;max-width:480px;margin:0 auto}
+  .section-title{font-size:19px;font-weight:800;color:var(--text);margin-bottom:4px}
+  .section-sub{font-size:13px;color:var(--text2);margin-bottom:16px}
+  .divider{width:40px;height:3px;background:var(--red);border-radius:2px;margin:8px 0 16px}
+  
+  /* SERVICE CARDS */
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .svc-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 12px;text-align:center;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--text);display:block}
+  .svc-card:hover,.svc-card:active{border-color:var(--red);box-shadow:0 4px 12px rgba(211,47,47,0.15);transform:translateY(-1px)}
+  .svc-icon{font-size:32px;margin-bottom:8px;display:block}
+  .svc-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px}
+  .svc-price{font-size:12px;color:var(--red);font-weight:600}
+  .svc-items{font-size:11px;color:var(--text2);margin-top:4px;line-height:1.5}
+  
+  /* PRICE TABLE */
+  .price-table{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--border)}
+  .pt-header{background:var(--red);color:#fff;padding:12px 16px;font-weight:700;font-size:14px;display:flex;justify-content:space-between}
+  .pt-row{padding:11px 16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);font-size:13px}
+  .pt-row:last-child{border-bottom:none}
+  .pt-row:nth-child(odd){background:#FAFAFA}
+  .pt-price{color:var(--red);font-weight:700;font-size:13px}
+  
+  /* WHY US */
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .why-card{background:#fff;border-radius:12px;padding:14px 12px;border:1px solid var(--border)}
+  .why-num{font-size:28px;font-weight:900;color:var(--red);line-height:1}
+  .why-label{font-size:12px;font-weight:700;color:var(--text);margin-top:4px}
+  .why-desc{font-size:11px;color:var(--text2);margin-top:3px}
+  
+  /* AREA */
+  .area-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .area-tag{background:#fff;border:1px solid var(--red);color:var(--red);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600}
+  
+  /* REVIEWS */
+  .review-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:12px}
+  .review-stars{color:#F9A825;font-size:14px;margin-bottom:6px}
+  .review-text{font-size:13px;color:var(--text);line-height:1.6;font-style:italic}
+  .review-author{font-size:12px;color:var(--text2);margin-top:8px;font-weight:600}
+  
+  /* CONTACT SECTION */
+  .contact-section{background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:28px 16px;text-align:center;color:#fff}
+  .contact-section h2{font-size:22px;font-weight:900;margin-bottom:6px}
+  .contact-section p{font-size:14px;opacity:0.9;margin-bottom:20px}
+  .contact-btns{display:flex;flex-direction:column;gap:12px;max-width:300px;margin:0 auto}
+  .contact-btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:50px;font-weight:800;font-size:16px;text-decoration:none}
+  .contact-btn.tel{background:#fff;color:var(--red)}
+  .contact-btn.zalo{background:#0068FF;color:#fff}
+  .phone-number{font-size:13px;opacity:0.8;margin-top:12px}
+  
+  /* FOOTER */
+  .footer{background:#1A1A1A;color:rgba(255,255,255,0.6);padding:16px;text-align:center;font-size:12px;padding-bottom:80px}
+  
+  /* PHONE ICON SVG */
+  .ph-icon{display:inline-block;width:18px;height:18px;vertical-align:middle}
+</style>
+
+<!-- STICKY CALL BAR -->
+<div class="sticky-call">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:6px;width:100%">
+    <span class="sticky-call-label">&#128222; Gọi ngay — có mặt trong 60 phút</span>
+    <div style="display:flex;gap:10px;width:100%;max-width:360px">
+      <a href="tel:0336874092">&#128222; 033 687 4092</a>
+      <a href="https://zalo.me/0336874092" class="zalo">&#128172; Zalo ngay</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="topbar">
+    <span>&#128205; Biên Hòa &amp; Đồng Nai</span>
+    <a href="tel:0336874092">&#128222; 033 687 4092</a>
+  </div>
+  <div class="hero">
+    <div class="hero-badge">&#9989; Dịch vụ tận nơi</div>
+    <h1>Sửa Chữa Điện Lạnh<br><span>Tại Nhà — Nhanh &amp; Uy Tín</span></h1>
+    <p class="hero-sub">Máy lạnh • Máy giặt • Tủ lạnh • Tivi • Bếp từ<br>Thợ lành nghề — Bảo hành sau sửa chữa</p>
+    <div class="hero-ctas">
+      <a href="tel:0336874092" class="btn-call">&#128222; Gọi Ngay</a>
+      <a href="https://zalo.me/0336874092" class="btn-zalo">&#128172; Nhắn Zalo</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><div class="trust-dot"></div>Có mặt trong 60 phút</div>
+      <div class="trust-item"><div class="trust-dot"></div>Báo giá trước khi sửa</div>
+      <div class="trust-item"><div class="trust-dot"></div>Bảo hành rõ ràng</div>
+      <div class="trust-item"><div class="trust-dot"></div>Thợ có kinh nghiệm</div>
+    </div>
+  </div>
+</div>
+
+<!-- USP BAR -->
+<div class="usp-bar">
+  <div class="usp-item"><div class="usp-icon">&#9201;</div><span>Có mặt trong 60 phút</span></div>
+  <div class="usp-item"><div class="usp-icon">&#128220;</div><span>Báo giá minh bạch</span></div>
+  <div class="usp-item"><div class="usp-icon">&#128736;</div><span>Thợ có tay nghề cao</span></div>
+  <div class="usp-item"><div class="usp-icon">&#9989;</div><span>Bảo hành sau sửa chữa</span></div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <div class="section-title">Dịch Vụ Của Chúng Tôi</div>
+  <div class="section-sub">Sửa tại nhà — không cần mang đi</div>
+  <div class="divider"></div>
+  <div class="service-grid">
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#10052;</span>
+      <div class="svc-name">Máy Lạnh / Điều Hòa</div>
+      <div class="svc-price">Từ 150.000đ</div>
+      <div class="svc-items">Vệ sinh • Nạp gas • Sửa chữa • Lắp đặt</div>
+    </a>
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#128247;</span>
+      <div class="svc-name">Máy Giặt</div>
+      <div class="svc-price">Từ 180.000đ</div>
+      <div class="svc-items">Không vắt • Không thoát nước • Vệ sinh lồng</div>
+    </a>
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#10052;&#65039;</span>
+      <div class="svc-name">Tủ Lạnh</div>
+      <div class="svc-price">Từ 200.000đ</div>
+      <div class="svc-items">Không lạnh • Chảy nước • Nạp gas • Thay linh kiện</div>
+    </a>
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#128250;</span>
+      <div class="svc-name">Tivi</div>
+      <div class="svc-price">Từ 150.000đ</div>
+      <div class="svc-items">Không lên hình • Hỏng bo mạch • Thay màn hình</div>
+    </a>
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#128293;</span>
+      <div class="svc-name">Bếp Điện Từ</div>
+      <div class="svc-price">Từ 150.000đ</div>
+      <div class="svc-items">Không lên • Hỏng cảm ứng • Thay mặt kính</div>
+    </a>
+    <a href="tel:0336874092" class="svc-card">
+      <span class="svc-icon">&#128168;</span>
+      <div class="svc-name">Máy Sấy</div>
+      <div class="svc-price">Từ 180.000đ</div>
+      <div class="svc-items">Không sấy • Sấy yếu • Vệ sinh • Thay linh kiện</div>
+    </a>
+  </div>
+</div>
+
+<!-- PRICE TABLE -->
+<div class="section" style="padding-top:0">
+  <div class="section-title">Bảng Giá Tham Khảo</div>
+  <div class="section-sub">Giá thực tế báo sau khi kiểm tra — không phát sinh ẩn</div>
+  <div class="divider"></div>
+  <div class="price-table">
+    <div class="pt-header"><span>Dịch vụ</span><span>Giá từ</span></div>
+    <div class="pt-row"><span>Vệ sinh máy lạnh 1 cục</span><span class="pt-price">150.000đ</span></div>
+    <div class="pt-row"><span>Vệ sinh máy lạnh 2 cục</span><span class="pt-price">220.000đ</span></div>
+    <div class="pt-row"><span>Nạp gas điều hòa R32</span><span class="pt-price">200.000đ</span></div>
+    <div class="pt-row"><span>Sửa máy giặt tại nhà</span><span class="pt-price">180.000đ</span></div>
+    <div class="pt-row"><span>Vệ sinh lồng máy giặt</span><span class="pt-price">150.000đ</span></div>
+    <div class="pt-row"><span>Sửa tủ lạnh</span><span class="pt-price">200.000đ</span></div>
+    <div class="pt-row"><span>Sửa tivi tại nhà</span><span class="pt-price">150.000đ</span></div>
+    <div class="pt-row"><span>Sửa bếp điện từ</span><span class="pt-price">150.000đ</span></div>
+  </div>
+  <p style="font-size:11px;color:var(--text2);margin-top:8px;text-align:center">&#9888;&#65039; Giá cuối tính sau khi thợ kiểm tra thiết bị thực tế</p>
+</div>
+
+<!-- WHY CHOOSE US -->
+<div style="background:#fff;padding:24px 16px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div style="max-width:480px;margin:0 auto">
+    <div class="section-title">Tại Sao Chọn Chúng Tôi?</div>
+    <div class="divider"></div>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">60'</div><div class="why-label">Phút có mặt</div><div class="why-desc">Thợ đến tận nơi, không chờ lâu</div></div>
+      <div class="why-card"><div class="why-num">0đ</div><div class="why-label">Chi phí xem máy</div><div class="why-desc">Kiểm tra miễn phí, báo giá trước</div></div>
+      <div class="why-card"><div class="why-num">6+</div><div class="why-label">Loại thiết bị</div><div class="why-desc">Điện lạnh, máy giặt, tivi, bếp từ</div></div>
+      <div class="why-card"><div class="why-num">BH</div><div class="why-label">Bảo hành sau sửa</div><div class="why-desc">Cam kết hoàn tiền nếu không ổn</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AREA -->
+<div class="section">
+  <div class="section-title">Khu Vực Phục Vụ</div>
+  <div class="section-sub">Toàn TP. Biên Hòa và các huyện lân cận Đồng Nai</div>
+  <div class="divider"></div>
+  <div class="area-tags">
+    <div class="area-tag">P. Tân Phong</div>
+    <div class="area-tag">P. Trảng Dài</div>
+    <div class="area-tag">P. Tân Biên</div>
+    <div class="area-tag">P. Hố Nai</div>
+    <div class="area-tag">P. Long Bình</div>
+    <div class="area-tag">P. Bửu Long</div>
+    <div class="area-tag">P. Tân Hiệp</div>
+    <div class="area-tag">P. Tam Hòa</div>
+    <div class="area-tag">Long Thành</div>
+    <div class="area-tag">Nhơn Trạch</div>
+    <div class="area-tag">Vĩnh Cửu</div>
+    <div class="area-tag">+ các phường khác</div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div style="background:#FFF8F8;padding:24px 16px;border-top:1px solid var(--border)">
+  <div style="max-width:480px;margin:0 auto">
+    <div class="section-title">Khách Hàng Nói Gì?</div>
+    <div class="divider"></div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-text">"Gọi lúc 9 giờ tối, thợ đến trong 45 phút, vệ sinh máy lạnh xong luôn. Giá hợp lý, thợ dọn dẹp sạch sẽ sau khi làm. Sẽ gọi lại lần sau."</div>
+      <div class="review-author">&#128100; Chị Lan — P. Tân Phong, Biên Hòa</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-text">"Máy giặt bị hỏng không vắt được, gọi buổi sáng, chiều thợ đến sửa xong. Có báo giá trước rõ ràng, không tốn thêm chi phí nào khác."</div>
+      <div class="review-author">&#128100; Anh Minh — P. Long Bình, Biên Hòa</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <div class="review-text">"Tủ lạnh không lạnh, gọi hôm nay, hôm sau thợ đến nạp gas và kiểm tra tổng thể. Dịch vụ chuyên nghiệp, tôi rất hài lòng."</div>
+      <div class="review-author">&#128100; Chị Hương — Long Thành, Đồng Nai</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT CTA -->
+<div class="contact-section">
+  <h2>Liên Hệ Ngay Hôm Nay</h2>
+  <p>Gọi điện hoặc nhắn Zalo — thợ có mặt trong 60 phút</p>
+  <div class="contact-btns">
+    <a href="tel:0336874092" class="contact-btn tel">&#128222; Gọi 033 687 4092</a>
+    <a href="https://zalo.me/0336874092" class="contact-btn zalo">&#128172; Nhắn Zalo ngay</a>
+  </div>
+  <p class="phone-number">Làm việc từ 7:00 — 21:00 hằng ngày · Kể cả cuối tuần</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p style="color:rgba(255,255,255,0.8);font-weight:600;margin-bottom:4px">Dịch Vụ Điện Lạnh Biên Hòa</p>
+  <p>Phục vụ toàn TP. Biên Hòa &amp; Đồng Nai</p>
+  <p style="margin-top:6px">&#128222; 033 687 4092 | Zalo: 0336874092</p>
+</div>
