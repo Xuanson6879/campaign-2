@@ -1,4 +1,9 @@
-
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sửa Chữa Điện Lạnh Tại Nhà Biên Hòa — Nhanh & Uy Tín | 033 687 4092</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
   *{box-sizing:border-box;margin:0;padding:0}
@@ -71,6 +76,22 @@
   .review-text{font-size:13px;font-style:italic;line-height:1.6}
   .review-author{font-size:12px;color:var(--text2);margin-top:8px;font-weight:600}
 
+  /* ===== GALLERY SECTION ===== */
+  .gallery-section{background:#fff;padding:24px 16px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .gallery-inner{max-width:480px;margin:0 auto}
+  .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:0}
+  .gallery-grid a{display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:#f0f0f0}
+  .gallery-grid a img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+  .gallery-grid a:hover img{transform:scale(1.05)}
+  .gallery-grid a:first-child{grid-column:span 2;aspect-ratio:16/9}
+  .gallery-badge{display:inline-block;background:var(--red-light);color:var(--red);font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px;margin-bottom:8px}
+
+  /* Lightbox */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;padding:16px}
+  .lightbox.active{display:flex}
+  .lightbox img{max-width:100%;max-height:90vh;border-radius:10px;object-fit:contain}
+  .lightbox-close{position:absolute;top:16px;right:16px;width:36px;height:36px;background:rgba(255,255,255,0.15);border:none;border-radius:50%;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+
   .contact-section{background:linear-gradient(135deg,#B71C1C,#D32F2F);padding:28px 16px;text-align:center;color:#fff}
   .contact-section h2{font-size:22px;font-weight:900;margin-bottom:6px}
   .contact-section p{font-size:14px;opacity:0.9;margin-bottom:20px}
@@ -81,6 +102,8 @@
 
   .footer{background:#1A1A1A;color:rgba(255,255,255,0.6);padding:20px 16px;text-align:center;font-size:12px}
 </style>
+</head>
+<body>
 
 <div class="sticky-call">
   <span class="sticky-call-label">&#128222; Gọi ngay — có mặt trong 60 phút</span>
@@ -206,6 +229,62 @@
   </div>
 </div>
 
+<!-- ===== SECTION ẢNH THỰC TẾ ===== -->
+<div class="gallery-section">
+  <div class="gallery-inner">
+    <span class="gallery-badge">📸 Ảnh thực tế</span>
+    <div class="section-title">Hình Ảnh Công Việc Thực Tế</div>
+    <div class="section-sub">Thợ của chúng tôi trong lúc làm việc tại nhà khách</div>
+    <div class="divider"></div>
+    <div class="gallery-grid">
+      <!-- Ảnh 1 — chiếm 2 cột (ảnh lớn đầu tiên) -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751020824417_2ddf872dc4777b11af3cc4b79f0ca95e.jpg"
+             alt="Thợ sửa máy lạnh tại nhà Biên Hòa" loading="lazy">
+      </a>
+      <!-- Ảnh 2 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751020888851_459d86aabd7c567161fbab55ca4d578f.jpg"
+             alt="Vệ sinh điều hòa tại nhà Đồng Nai" loading="lazy">
+      </a>
+      <!-- Ảnh 3 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751025116800_46b3c26a6bbedc7de53546ed69959b1b.jpg"
+             alt="Sửa máy giặt tại nhà Biên Hòa" loading="lazy">
+      </a>
+      <!-- Ảnh 4 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751025130354_868430cd806202edb4b0be9d8a959530.jpg"
+             alt="Thợ điện lạnh chuyên nghiệp Biên Hòa" loading="lazy">
+      </a>
+      <!-- Ảnh 5 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751025182955_0a9e57080fe8e9d321240e5ae43b5f11.jpg"
+             alt="Nạp gas máy lạnh Biên Hòa" loading="lazy">
+      </a>
+      <!-- Ảnh 6 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751025204261_b2826bd937701abbb2b430953bae518a.jpg"
+             alt="Sửa tủ lạnh tại nhà Đồng Nai" loading="lazy">
+      </a>
+      <!-- Ảnh 7 -->
+      <a href="#" onclick="openLightbox(this);return false;">
+        <img src="https://raw.githubusercontent.com/Xuanson6879/campaign-2/main/z7751042060783_59d18273a1544074ad5e18bfc8f83790.jpg"
+             alt="Dịch vụ điện lạnh uy tín Biên Hòa" loading="lazy">
+      </a>
+    </div>
+    <p style="font-size:12px;color:var(--text2);text-align:center;margin-top:12px">
+      &#128247; Ảnh thực tế từ thợ — không chỉnh sửa
+    </p>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <div class="contact-section">
   <h2>Liên Hệ Ngay Hôm Nay</h2>
   <p>Gọi điện hoặc nhắn Zalo — thợ có mặt trong 60 phút</p>
@@ -221,3 +300,17 @@
   <p>Phục vụ toàn TP. Biên Hòa &amp; Đồng Nai</p>
   <p style="margin-top:6px">&#128222; 033 687 4092 &nbsp;|&nbsp; Zalo: 0336874092</p>
 </div>
+
+<script>
+  function openLightbox(el) {
+    var img = el.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+</script>
+
+</body>
+</html>
